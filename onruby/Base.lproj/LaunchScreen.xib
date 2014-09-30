@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchImageIcon" translatesAutoresizingMaskIntoConstraints="NO" id="0LS-Vu-lqP">
+                    <rect key="frame" x="100" y="100" width="200" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="TlD-Rj-FT9"/>
+                        <constraint firstAttribute="height" constant="200" id="g0c-Wa-MMi"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="0LS-Vu-lqP" secondAttribute="centerX" id="7mn-wh-uKr"/>
+                <constraint firstAttribute="centerX" secondItem="0LS-Vu-lqP" secondAttribute="centerX" id="9AX-qq-coz"/>
+                <constraint firstAttribute="centerX" secondItem="0LS-Vu-lqP" secondAttribute="centerX" id="K0d-05-Sj5"/>
+                <constraint firstAttribute="centerY" secondItem="0LS-Vu-lqP" secondAttribute="centerY" id="hqQ-0i-nr0"/>
+                <constraint firstAttribute="centerY" secondItem="0LS-Vu-lqP" secondAttribute="centerY" id="pgz-So-SuZ"/>
+                <constraint firstAttribute="centerY" secondItem="0LS-Vu-lqP" secondAttribute="centerY" id="xyb-wb-lFk"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="7mn-wh-uKr"/>
+                    <exclude reference="9AX-qq-coz"/>
+                    <exclude reference="hqQ-0i-nr0"/>
+                    <exclude reference="pgz-So-SuZ"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="548" y="455"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="LaunchImageIcon" width="200" height="200"/>
+    </resources>
+</document>

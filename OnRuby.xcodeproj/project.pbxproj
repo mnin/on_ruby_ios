@@ -1,0 +1,629 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0B00D67719D2CA2C00043E53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B00D67619D2CA2C00043E53 /* AppDelegate.swift */; };
+		0B00D67E19D2CA2C00043E53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B00D67C19D2CA2C00043E53 /* Main.storyboard */; };
+		0B00D68019D2CA2C00043E53 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B00D67F19D2CA2C00043E53 /* Images.xcassets */; };
+		0B00D68319D2CA2C00043E53 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B00D68119D2CA2C00043E53 /* LaunchScreen.xib */; };
+		0B00D68F19D2CA2C00043E53 /* onrubyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B00D68E19D2CA2C00043E53 /* onrubyTests.swift */; };
+		0B372B6B19D466E700C52719 /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B372B6A19D466E700C52719 /* Topic.swift */; };
+		0B372B6D19D466F100C52719 /* Material.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B372B6C19D466F100C52719 /* Material.swift */; };
+		0B372B6F19D4728D00C52719 /* ParticipantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B372B6E19D4728D00C52719 /* ParticipantsViewController.swift */; };
+		0B69F85C19D44A1200903033 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B69F85B19D44A1200903033 /* User.swift */; };
+		0B69F85E19D4591100903033 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B69F85D19D4591100903033 /* UserViewController.swift */; };
+		0B69F86019D45BB100903033 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B69F85F19D45BB100903033 /* Location.swift */; };
+		0B77BB6719D2ED71007FA19F /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B77BB6619D2ED71007FA19F /* EventsViewController.swift */; };
+		0B77BB6919D2F505007FA19F /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B77BB6819D2F505007FA19F /* Event.swift */; };
+		0BA7254A19D2D0A300971488 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA7254919D2D0A300971488 /* SettingsViewController.swift */; };
+		0BA7254C19D2D19D00971488 /* UserGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA7254B19D2D19D00971488 /* UserGroup.swift */; };
+		0BE730EC19D404E3001A84F0 /* berlin.json in Resources */ = {isa = PBXBuildFile; fileRef = 0BE730E019D404E3001A84F0 /* berlin.json */; };
+		0BE730ED19D404E3001A84F0 /* bonn.json in Resources */ = {isa = PBXBuildFile; fileRef = 0BE730E119D404E3001A84F0 /* bonn.json */; };
+		0BE730EE19D404E3001A84F0 /* bremen.json in Resources */ = {isa = PBXBuildFile; fileRef = 0BE730E219D404E3001A84F0 /* bremen.json */; };
+		0BE730EF19D404E3001A84F0 /* cologne.json in Resources */ = {isa = PBXBuildFile; fileRef = 0BE730E319D404E3001A84F0 /* cologne.json */; };
+		0BE730F019D404E3001A84F0 /* dresden.json in Resources */ = {isa = PBXBuildFile; fileRef = 0BE730E419D404E3001A84F0 /* dresden.json */; };
+		0BE730F219D404E3001A84F0 /* hamburg.json in Resources */ = {isa = PBXBuildFile; fileRef = 0BE730E619D404E3001A84F0 /* hamburg.json */; };
+		0BE730F319D404E3001A84F0 /* innsbruck.json in Resources */ = {isa = PBXBuildFile; fileRef = 0BE730E719D404E3001A84F0 /* innsbruck.json */; };
+		0BE730F419D404E3001A84F0 /* karlsruhe.json in Resources */ = {isa = PBXBuildFile; fileRef = 0BE730E819D404E3001A84F0 /* karlsruhe.json */; };
+		0BE730F519D404E3001A84F0 /* leipzig.json in Resources */ = {isa = PBXBuildFile; fileRef = 0BE730E919D404E3001A84F0 /* leipzig.json */; };
+		0BE730F619D404E3001A84F0 /* railsgirlshh.json in Resources */ = {isa = PBXBuildFile; fileRef = 0BE730EA19D404E3001A84F0 /* railsgirlshh.json */; };
+		0BE730F719D404E3001A84F0 /* saar.json in Resources */ = {isa = PBXBuildFile; fileRef = 0BE730EB19D404E3001A84F0 /* saar.json */; };
+		0BF0785A19D436040050586D /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF0785919D436040050586D /* EventViewController.swift */; };
+		0BF811E719DAD9DF001C1B64 /* NSObject+AssociatedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF811E619DAD9DF001C1B64 /* NSObject+AssociatedObject.m */; };
+		0BFB456619D5EDC900D99C24 /* TopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFB456519D5EDC800D99C24 /* TopicViewController.swift */; };
+		411851A58196464BBD73D628 /* libPods-onruby.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28341F7F2D6F47B6A081713B /* libPods-onruby.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0B00D68919D2CA2C00043E53 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B00D66919D2CA2C00043E53 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0B00D67019D2CA2C00043E53;
+			remoteInfo = onruby;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0B00D67119D2CA2C00043E53 /* OnRuby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnRuby.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B00D67519D2CA2C00043E53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B00D67619D2CA2C00043E53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0B00D67D19D2CA2C00043E53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0B00D67F19D2CA2C00043E53 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0B00D68219D2CA2C00043E53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		0B00D68819D2CA2C00043E53 /* onrubyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = onrubyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B00D68D19D2CA2C00043E53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B00D68E19D2CA2C00043E53 /* onrubyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onrubyTests.swift; sourceTree = "<group>"; };
+		0B372B6A19D466E700C52719 /* Topic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
+		0B372B6C19D466F100C52719 /* Material.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Material.swift; sourceTree = "<group>"; };
+		0B372B6E19D4728D00C52719 /* ParticipantsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticipantsViewController.swift; sourceTree = "<group>"; };
+		0B69F85B19D44A1200903033 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0B69F85D19D4591100903033 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		0B69F85F19D45BB100903033 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		0B77BB6619D2ED71007FA19F /* EventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		0B77BB6819D2F505007FA19F /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		0BA7254619D2CD8700971488 /* onruby-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "onruby-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		0BA7254919D2D0A300971488 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		0BA7254B19D2D19D00971488 /* UserGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserGroup.swift; sourceTree = "<group>"; };
+		0BE730E019D404E3001A84F0 /* berlin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = berlin.json; sourceTree = "<group>"; };
+		0BE730E119D404E3001A84F0 /* bonn.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bonn.json; sourceTree = "<group>"; };
+		0BE730E219D404E3001A84F0 /* bremen.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bremen.json; sourceTree = "<group>"; };
+		0BE730E319D404E3001A84F0 /* cologne.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cologne.json; sourceTree = "<group>"; };
+		0BE730E419D404E3001A84F0 /* dresden.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dresden.json; sourceTree = "<group>"; };
+		0BE730E619D404E3001A84F0 /* hamburg.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hamburg.json; sourceTree = "<group>"; };
+		0BE730E719D404E3001A84F0 /* innsbruck.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = innsbruck.json; sourceTree = "<group>"; };
+		0BE730E819D404E3001A84F0 /* karlsruhe.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = karlsruhe.json; sourceTree = "<group>"; };
+		0BE730E919D404E3001A84F0 /* leipzig.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = leipzig.json; sourceTree = "<group>"; };
+		0BE730EA19D404E3001A84F0 /* railsgirlshh.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = railsgirlshh.json; sourceTree = "<group>"; };
+		0BE730EB19D404E3001A84F0 /* saar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = saar.json; sourceTree = "<group>"; };
+		0BF0785719D4199F0050586D /* onruby-Environment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "onruby-Environment.h"; sourceTree = "<group>"; };
+		0BF0785919D436040050586D /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		0BF811E519DAD9DF001C1B64 /* NSObject+AssociatedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AssociatedObject.h"; sourceTree = "<group>"; };
+		0BF811E619DAD9DF001C1B64 /* NSObject+AssociatedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AssociatedObject.m"; sourceTree = "<group>"; };
+		0BFB456519D5EDC800D99C24 /* TopicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicViewController.swift; sourceTree = "<group>"; };
+		28341F7F2D6F47B6A081713B /* libPods-onruby.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-onruby.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D08085E9CFA8433BBDC1B643 /* Pods-onruby.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onruby.xcconfig"; path = "Pods/Pods-onruby.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0B00D66E19D2CA2C00043E53 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				411851A58196464BBD73D628 /* libPods-onruby.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B00D68519D2CA2C00043E53 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0B00D66819D2CA2C00043E53 = {
+			isa = PBXGroup;
+			children = (
+				0B00D67319D2CA2C00043E53 /* onruby */,
+				0B00D68B19D2CA2C00043E53 /* onrubyTests */,
+				0B00D67219D2CA2C00043E53 /* Products */,
+				AD650CE950FE49418F00FB3A /* Frameworks */,
+				0BA7254619D2CD8700971488 /* onruby-Bridging-Header.h */,
+				0BF0785719D4199F0050586D /* onruby-Environment.h */,
+				D08085E9CFA8433BBDC1B643 /* Pods-onruby.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		0B00D67219D2CA2C00043E53 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0B00D67119D2CA2C00043E53 /* OnRuby.app */,
+				0B00D68819D2CA2C00043E53 /* onrubyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0B00D67319D2CA2C00043E53 /* onruby */ = {
+			isa = PBXGroup;
+			children = (
+				0BF811DF19DAD810001C1B64 /* extensions */,
+				0BE730DF19D404E3001A84F0 /* data */,
+				0B77BB6E19D305F9007FA19F /* models */,
+				0B77BB6D19D305F3007FA19F /* controllers */,
+				0B00D67619D2CA2C00043E53 /* AppDelegate.swift */,
+				0B00D67C19D2CA2C00043E53 /* Main.storyboard */,
+				0B00D67F19D2CA2C00043E53 /* Images.xcassets */,
+				0B00D68119D2CA2C00043E53 /* LaunchScreen.xib */,
+				0B00D67419D2CA2C00043E53 /* Supporting Files */,
+			);
+			path = onruby;
+			sourceTree = "<group>";
+		};
+		0B00D67419D2CA2C00043E53 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0B00D67519D2CA2C00043E53 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0B00D68B19D2CA2C00043E53 /* onrubyTests */ = {
+			isa = PBXGroup;
+			children = (
+				0B00D68E19D2CA2C00043E53 /* onrubyTests.swift */,
+				0B00D68C19D2CA2C00043E53 /* Supporting Files */,
+			);
+			path = onrubyTests;
+			sourceTree = "<group>";
+		};
+		0B00D68C19D2CA2C00043E53 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0B00D68D19D2CA2C00043E53 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0B77BB6D19D305F3007FA19F /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0B77BB6619D2ED71007FA19F /* EventsViewController.swift */,
+				0BF0785919D436040050586D /* EventViewController.swift */,
+				0BA7254919D2D0A300971488 /* SettingsViewController.swift */,
+				0B69F85D19D4591100903033 /* UserViewController.swift */,
+				0B372B6E19D4728D00C52719 /* ParticipantsViewController.swift */,
+				0BFB456519D5EDC800D99C24 /* TopicViewController.swift */,
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
+		0B77BB6E19D305F9007FA19F /* models */ = {
+			isa = PBXGroup;
+			children = (
+				0BA7254B19D2D19D00971488 /* UserGroup.swift */,
+				0B77BB6819D2F505007FA19F /* Event.swift */,
+				0B69F85B19D44A1200903033 /* User.swift */,
+				0B69F85F19D45BB100903033 /* Location.swift */,
+				0B372B6A19D466E700C52719 /* Topic.swift */,
+				0B372B6C19D466F100C52719 /* Material.swift */,
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
+		0BE730DF19D404E3001A84F0 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				0BE730E019D404E3001A84F0 /* berlin.json */,
+				0BE730E119D404E3001A84F0 /* bonn.json */,
+				0BE730E219D404E3001A84F0 /* bremen.json */,
+				0BE730E319D404E3001A84F0 /* cologne.json */,
+				0BE730E419D404E3001A84F0 /* dresden.json */,
+				0BE730E619D404E3001A84F0 /* hamburg.json */,
+				0BE730E719D404E3001A84F0 /* innsbruck.json */,
+				0BE730E819D404E3001A84F0 /* karlsruhe.json */,
+				0BE730E919D404E3001A84F0 /* leipzig.json */,
+				0BE730EA19D404E3001A84F0 /* railsgirlshh.json */,
+				0BE730EB19D404E3001A84F0 /* saar.json */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		0BF811DF19DAD810001C1B64 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0BF811E519DAD9DF001C1B64 /* NSObject+AssociatedObject.h */,
+				0BF811E619DAD9DF001C1B64 /* NSObject+AssociatedObject.m */,
+			);
+			name = extensions;
+			sourceTree = "<group>";
+		};
+		AD650CE950FE49418F00FB3A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				28341F7F2D6F47B6A081713B /* libPods-onruby.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0B00D67019D2CA2C00043E53 /* onruby */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B00D69219D2CA2C00043E53 /* Build configuration list for PBXNativeTarget "onruby" */;
+			buildPhases = (
+				0BF0785119D40E4B0050586D /* ShellScript */,
+				EF3655362BF94EE48CEC4DD5 /* Check Pods Manifest.lock */,
+				0B00D66D19D2CA2C00043E53 /* Sources */,
+				0B00D66E19D2CA2C00043E53 /* Frameworks */,
+				0B00D66F19D2CA2C00043E53 /* Resources */,
+				2B8CA24A4CE8404A9F609C4E /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = onruby;
+			productName = onruby;
+			productReference = 0B00D67119D2CA2C00043E53 /* OnRuby.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0B00D68719D2CA2C00043E53 /* onrubyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B00D69519D2CA2C00043E53 /* Build configuration list for PBXNativeTarget "onrubyTests" */;
+			buildPhases = (
+				0B00D68419D2CA2C00043E53 /* Sources */,
+				0B00D68519D2CA2C00043E53 /* Frameworks */,
+				0B00D68619D2CA2C00043E53 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0B00D68A19D2CA2C00043E53 /* PBXTargetDependency */,
+			);
+			name = onrubyTests;
+			productName = onrubyTests;
+			productReference = 0B00D68819D2CA2C00043E53 /* onrubyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0B00D66919D2CA2C00043E53 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "";
+				TargetAttributes = {
+					0B00D67019D2CA2C00043E53 = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					0B00D68719D2CA2C00043E53 = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = 0B00D67019D2CA2C00043E53;
+					};
+				};
+			};
+			buildConfigurationList = 0B00D66C19D2CA2C00043E53 /* Build configuration list for PBXProject "onruby" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0B00D66819D2CA2C00043E53;
+			productRefGroup = 0B00D67219D2CA2C00043E53 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0B00D67019D2CA2C00043E53 /* onruby */,
+				0B00D68719D2CA2C00043E53 /* onrubyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0B00D66F19D2CA2C00043E53 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BE730F319D404E3001A84F0 /* innsbruck.json in Resources */,
+				0BE730F619D404E3001A84F0 /* railsgirlshh.json in Resources */,
+				0BE730EE19D404E3001A84F0 /* bremen.json in Resources */,
+				0BE730F019D404E3001A84F0 /* dresden.json in Resources */,
+				0B00D67E19D2CA2C00043E53 /* Main.storyboard in Resources */,
+				0BE730F519D404E3001A84F0 /* leipzig.json in Resources */,
+				0B00D68319D2CA2C00043E53 /* LaunchScreen.xib in Resources */,
+				0BE730F219D404E3001A84F0 /* hamburg.json in Resources */,
+				0B00D68019D2CA2C00043E53 /* Images.xcassets in Resources */,
+				0BE730EC19D404E3001A84F0 /* berlin.json in Resources */,
+				0BE730F719D404E3001A84F0 /* saar.json in Resources */,
+				0BE730ED19D404E3001A84F0 /* bonn.json in Resources */,
+				0BE730EF19D404E3001A84F0 /* cologne.json in Resources */,
+				0BE730F419D404E3001A84F0 /* karlsruhe.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B00D68619D2CA2C00043E53 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0BF0785119D40E4B0050586D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/.env",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = "/usr/bin/env ruby";
+			shellScript = "require 'yaml'\n\nconfig = YAML::load(File.read('.env'))\n\nFile.open(\"onruby-Environment.h\", \"w\") do |file|\nfile.write <<-EOF\n#ifndef onruby_onruby_environment_h\n#define onruby_onruby_environment_h\n\n#define API_KEY @\"#{config['api_key']}\"\n\n#endif\nEOF\nend";
+			showEnvVarsInLog = 0;
+		};
+		2B8CA24A4CE8404A9F609C4E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-onruby-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF3655362BF94EE48CEC4DD5 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0B00D66D19D2CA2C00043E53 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B372B6F19D4728D00C52719 /* ParticipantsViewController.swift in Sources */,
+				0BFB456619D5EDC900D99C24 /* TopicViewController.swift in Sources */,
+				0BF811E719DAD9DF001C1B64 /* NSObject+AssociatedObject.m in Sources */,
+				0BA7254A19D2D0A300971488 /* SettingsViewController.swift in Sources */,
+				0B69F85E19D4591100903033 /* UserViewController.swift in Sources */,
+				0B372B6B19D466E700C52719 /* Topic.swift in Sources */,
+				0B00D67719D2CA2C00043E53 /* AppDelegate.swift in Sources */,
+				0B372B6D19D466F100C52719 /* Material.swift in Sources */,
+				0BA7254C19D2D19D00971488 /* UserGroup.swift in Sources */,
+				0B69F86019D45BB100903033 /* Location.swift in Sources */,
+				0B77BB6919D2F505007FA19F /* Event.swift in Sources */,
+				0B77BB6719D2ED71007FA19F /* EventsViewController.swift in Sources */,
+				0BF0785A19D436040050586D /* EventViewController.swift in Sources */,
+				0B69F85C19D44A1200903033 /* User.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B00D68419D2CA2C00043E53 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B00D68F19D2CA2C00043E53 /* onrubyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0B00D68A19D2CA2C00043E53 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0B00D67019D2CA2C00043E53 /* onruby */;
+			targetProxy = 0B00D68919D2CA2C00043E53 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0B00D67C19D2CA2C00043E53 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0B00D67D19D2CA2C00043E53 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0B00D68119D2CA2C00043E53 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0B00D68219D2CA2C00043E53 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0B00D69019D2CA2C00043E53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0B00D69119D2CA2C00043E53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0B00D69319D2CA2C00043E53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D08085E9CFA8433BBDC1B643 /* Pods-onruby.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = onruby/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = OnRuby;
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "onruby-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0B00D69419D2CA2C00043E53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D08085E9CFA8433BBDC1B643 /* Pods-onruby.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				INFOPLIST_FILE = onruby/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = OnRuby;
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "onruby-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0B00D69619D2CA2C00043E53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = onrubyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = onrubyTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/onruby.app/onruby";
+			};
+			name = Debug;
+		};
+		0B00D69719D2CA2C00043E53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = onrubyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = onrubyTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/onruby.app/onruby";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0B00D66C19D2CA2C00043E53 /* Build configuration list for PBXProject "onruby" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B00D69019D2CA2C00043E53 /* Debug */,
+				0B00D69119D2CA2C00043E53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0B00D69219D2CA2C00043E53 /* Build configuration list for PBXNativeTarget "onruby" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B00D69319D2CA2C00043E53 /* Debug */,
+				0B00D69419D2CA2C00043E53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0B00D69519D2CA2C00043E53 /* Build configuration list for PBXNativeTarget "onrubyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B00D69619D2CA2C00043E53 /* Debug */,
+				0B00D69719D2CA2C00043E53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0B00D66919D2CA2C00043E53 /* Project object */;
+}
