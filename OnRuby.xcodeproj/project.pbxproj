@@ -246,6 +246,7 @@
 				0B00D66E19D2CA2C00043E53 /* Frameworks */,
 				0B00D66F19D2CA2C00043E53 /* Resources */,
 				2B8CA24A4CE8404A9F609C4E /* Copy Pods Resources */,
+				0B54FE6619E2A4C000C8E418 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -343,19 +344,32 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0B54FE6619E2A4C000C8E418 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = "/usr/bin/env ruby";
+			shellScript = "require 'yaml'\n\nconfig = YAML::load(File.read('.env'))\n\nsystem(\"./Pods/CrashlyticsFramework/Crashlytics.framework/run #{config['crashlytics_api_key']} #{config['crashlytics_app_key']}\")";
+			showEnvVarsInLog = 0;
+		};
 		0BF0785119D40E4B0050586D /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/.env",
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = "/usr/bin/env ruby";
-			shellScript = "require 'yaml'\n\nconfig = YAML::load(File.read('.env'))\n\nFile.open(\"onruby-Environment.h\", \"w\") do |file|\nfile.write <<-EOF\n#ifndef onruby_onruby_environment_h\n#define onruby_onruby_environment_h\n\n#define API_KEY @\"#{config['api_key']}\"\n\n#endif\nEOF\nend";
+			shellScript = "require 'yaml'\n\nconfig = YAML::load(File.read('.env'))\n\nFile.open(\"onruby-Environment.h\", \"w\") do |file|\nfile.write <<-EOF\n#ifndef onruby_onruby_environment_h\n#define onruby_onruby_environment_h\n\n#define ON_RUBY_API_KEY @\"#{config['api_key']}\"\n#define CRASHLYTICS_API_KEY @\"#{config['crashlytics_api_key']}\"\n\n#endif\nEOF\nend";
 			showEnvVarsInLog = 0;
 		};
 		2B8CA24A4CE8404A9F609C4E /* Copy Pods Resources */ = {

@@ -20,14 +20,17 @@ PODS:
   - AFNetworking/UIKit (2.4.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - CrashlyticsFramework (2.2.4)
   - MMMarkdown (0.3)
 
 DEPENDENCIES:
   - AFNetworking (= 2.4.1)
+  - CrashlyticsFramework (= 2.2.4)
   - MMMarkdown (= 0.3)
 
 SPEC CHECKSUMS:
   AFNetworking: 0aabc6fae66d6e5d039eeb21c315843c7aae51ab
+  CrashlyticsFramework: 0c28a2c07a51b7691e6668b83824b0b0be77f307
   MMMarkdown: 95af8920c647512d1efa2ac8ac1932baf3266e2c
 
 COCOAPODS: 0.33.1

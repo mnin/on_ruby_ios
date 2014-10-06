@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         let sharedCached : NSURLCache = NSURLCache(memoryCapacity: 2 * 1024 * 1024, diskCapacity: 100 * 1024 * 1024, diskPath: nil)
         NSURLCache.setSharedURLCache(sharedCached)
+
+        Crashlytics.startWithAPIKey(CRASHLYTICS_API_KEY)
 
         UserGroup.current().allEvents()
         UserGroup.current().allUserDictionary()

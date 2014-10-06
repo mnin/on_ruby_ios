@@ -120,7 +120,7 @@ class UserGroup {
         var filepath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
         filepath += "/\(self.key).json"
 
-        manager.requestSerializer.setValue(API_KEY, forHTTPHeaderField: "x-api-key")
+        manager.requestSerializer.setValue(ON_RUBY_API_KEY, forHTTPHeaderField: "x-api-key")
         manager.GET(self.dataUrlString(), parameters: nil, success: { (operation: AFHTTPRequestOperation!, responseObject: AnyObject!) in
             var data = operation.responseData
             data.writeToFile(filepath, atomically: false)
