@@ -22,6 +22,8 @@ let allUserGroups = [
 ]
 
 class UserGroup {
+    let notificationCenter = NSNotificationCenter.defaultCenter()
+
     var jsonDictionary: NSDictionary?
     var events          = [Event]()
     var topics          = [Topic]()
@@ -123,12 +125,12 @@ class UserGroup {
             var data = operation.responseData
             data.writeToFile(filepath, atomically: false)
             if UserGroup.current().key == self.key {
-                let notificationCenter = NSNotificationCenter.defaultCenter()
                 self.resetCache()
 
-                notificationCenter.postNotificationName("reloadUserGroup", object: nil)
+                self.notificationCenter.postNotificationName("reloadUserGroup", object: UserGroup.current().key)
             }
         }, failure: { (operation: AFHTTPRequestOperation!, error: NSError!) in
+            self.notificationCenter.postNotificationName("reloadUserGroup", object: nil)
             let alertView = UIAlertView(title: "Error", message: error.localizedDescription, delegate: nil, cancelButtonTitle: "OK")
             alertView.show()
         })

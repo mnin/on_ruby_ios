@@ -67,6 +67,6 @@ class Event {
             eventArray.append(Event(id: id, name: name, description: description, date: date, topicArray: topicArray, materialsArray: materialsArray, participantsArray: participantsArray, user: user, location: location))
         }
 
-        return eventArray
+        return eventArray.sorted({$0.date.timeIntervalSince1970 > $1.date.timeIntervalSince1970})
     }
 }

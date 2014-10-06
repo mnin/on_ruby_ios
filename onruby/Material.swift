@@ -19,6 +19,10 @@ class Material {
         self.url     = url
     }
 
+    func user() -> User? {
+        return User.find(self.user_id!)
+    }
+
     class func loadFromJsonArray(materialsFromJson: NSArray) -> [Material] {
         var materialArray = [Material]()
         var id: Int

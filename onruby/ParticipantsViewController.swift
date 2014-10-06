@@ -24,7 +24,6 @@ class ParticipantsViewController: UITableViewController {
         if cell == nil
         {
             cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: cellIdentifier)
-            cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         }
 
         let userImage = cell.viewWithTag(100) as UIImageView
@@ -33,6 +32,7 @@ class ParticipantsViewController: UITableViewController {
         let user: User = self.participants[indexPath.row]
         userNickname.text = user.nickname
 
+        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         let urlObject = NSURL(string: user.imageURL)
         let iconURLRequest = NSURLRequest(URL: urlObject)
         cell.imageView?.associatedObject = urlObject
@@ -40,7 +40,7 @@ class ParticipantsViewController: UITableViewController {
 
         if user.image == nil {
             cell.imageView?.setImageWithURLRequest(iconURLRequest, placeholderImage: nil, success:
-                { [weak cell] (request:NSURLRequest!, response: NSHTTPURLResponse!, image: UIImage!) -> Void in
+                { [weak cell, user] (request:NSURLRequest!, response: NSHTTPURLResponse!, image: UIImage!) -> Void in
                     if request != nil && cell?.imageView?.associatedObject as NSURL? == request.URL {
                         UIGraphicsBeginImageContext(CGSize(width: 40, height: 40))
                         image.drawInRect(CGRect(x: 0, y: 0, width: 40, height: 40))

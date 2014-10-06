@@ -17,12 +17,6 @@ class TopicViewController: UIViewController, UIActionSheetDelegate {
         setAttributedTextForTopic(topic)
     }
 
-    override func loadView() {
-        super.loadView()
-
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Action, target: self, action: "showActionSheet")
-    }
-
     func setAttributedTextForTopic(topic: Topic) {
         let topicName = NSAttributedString(string: "\(topic.name):", attributes: NSDictionary(object: UIFont.boldSystemFontOfSize(UIFont.systemFontSize() + 2), forKey: NSFontAttributeName))
         let lineBreak = NSAttributedString(string: "\n")
@@ -36,21 +30,5 @@ class TopicViewController: UIViewController, UIActionSheetDelegate {
         attributedText.appendAttributedString(topicDescription)
 
         textView.attributedText = attributedText
-    }
-
-    func showActionSheet() {
-        let actionSheet = UIActionSheet(title: nil, delegate: self, cancelButtonTitle: "cancel", destructiveButtonTitle: nil, otherButtonTitles: "show speaker")
-        actionSheet.showInView(self.view)
-    }
-
-    func actionSheet(actionSheet: UIActionSheet, didDismissWithButtonIndex buttonIndex: Int) {
-        if buttonIndex == 1 {
-            let user = User.find(topic.user_id)
-            if user != nil {
-                var userViewController = storyboard?.instantiateViewControllerWithIdentifier("user") as UserViewController
-                userViewController.user = user
-                navigationController?.pushViewController(userViewController, animated: true)
-            }
-        }
     }
 }

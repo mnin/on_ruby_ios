@@ -63,7 +63,6 @@ class EventViewController: UITableViewController {
         if cell == nil
         {
             cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: cellIdentifier)
-            cell?.selectionStyle = UITableViewCellSelectionStyle.None
         }
 
         switch indexPath.section {
@@ -100,7 +99,7 @@ class EventViewController: UITableViewController {
                 let iconURLRequest = NSURLRequest(URL: urlObject)
                 cell.imageView?.associatedObject = urlObject
                 cell.imageView?.image = nil
-                
+
                 if user!.image == nil {
                     cell.imageView?.setImageWithURLRequest(iconURLRequest, placeholderImage: nil, success:
                         { [weak cell] (request:NSURLRequest!, response: NSHTTPURLResponse!, image: UIImage!) -> Void in
@@ -205,5 +204,42 @@ class EventViewController: UITableViewController {
         default:
             break
         }
+    }
+
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        if indexPath.section == 1 || indexPath.section == 2 {
+            return true
+        } else {
+            return false
+        }
+    }
+
+    override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [AnyObject]? {
+        let showUserClosure = { (action: UITableViewRowAction!, indexPath: NSIndexPath!) -> Void in
+            var user: User?
+            if indexPath.section == 1 {
+                let topic = self.event.topicArray[indexPath.row]
+                user = topic.user()
+            } else if indexPath.section == 2 {
+                let material = self.event.materialsArray[indexPath.row]
+                user = material.user()
+            }
+
+            if user != nil {
+                var userViewController = self.storyboard?.instantiateViewControllerWithIdentifier("user") as UserViewController
+                userViewController.user = user
+                self.navigationController?.pushViewController(userViewController, animated: true)
+            }
+
+            tableView.setEditing(false, animated: true)
+        }
+
+        let showUserAction = UITableViewRowAction(style: .Default, title: "User", handler: showUserClosure)
+        showUserAction.backgroundColor = UIColor.greenColor()
+
+        return [showUserAction]
+    }
+
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
     }
 }

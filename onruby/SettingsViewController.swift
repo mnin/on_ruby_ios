@@ -145,6 +145,6 @@ class SettingsViewController: UITableViewController {
     func postUserGroupChangedNotification() {
         let notificationCenter = NSNotificationCenter.defaultCenter()
 
-        notificationCenter.postNotificationName("reloadUserGroup", object: nil)
+        notificationCenter.postNotificationName("reloadUserGroup", object: UserGroup.current().key)
     }
 }

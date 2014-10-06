@@ -85,7 +85,7 @@ class UserViewController: UITableViewController {
                 let iconURLRequest = NSURLRequest(URL: urlObject)
                 cell.imageView?.associatedObject = urlObject
                 cell.imageView?.image = nil
-                
+
                 if user.image == nil {
                     cell.imageView?.setImageWithURLRequest(iconURLRequest, placeholderImage: nil, success:
                         { [weak cell] (request:NSURLRequest!, response: NSHTTPURLResponse!, image: UIImage!) -> Void in

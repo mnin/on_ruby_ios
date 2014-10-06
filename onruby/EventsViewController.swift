@@ -27,16 +27,22 @@ class EventsViewController: UITableViewController {
 
     func setRefreshControl() {
         self.refreshControl = UIRefreshControl()
-        self.refreshControl?.attributedTitle = self.refreshControlTitle()
+        self.refreshControlTitle()
         self.refreshControl?.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
     }
 
     func refresh(sender: AnyObject) {
+        self.refreshControl?.attributedTitle = NSAttributedString(string: "Refreshing...")
         UserGroup.current().reloadJSONFile()
     }
 
-    func refreshControlTitle() -> NSAttributedString {
-        return NSAttributedString(string: "Pull to refresh (last updated at \(UserGroup.current().getModificationDate().description))")
+    func refreshControlTitle() {
+        var dateFormatter = NSDateFormatter()
+        dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
+        dateFormatter.timeStyle = NSDateFormatterStyle.MediumStyle
+        let lastModificationDate = UserGroup.current().getModificationDate()
+
+        self.refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh (last updated at \(dateFormatter.stringFromDate(lastModificationDate)))")
     }
 
     override func numberOfSectionsInTableView(tableView: UITableView?) -> Int {
@@ -53,15 +59,16 @@ class EventsViewController: UITableViewController {
         if cell == nil
         {
             cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: cellIdentifier)
-            cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         }
-        let event = self.eventArray[indexPath.row]
 
+        let event = self.eventArray[indexPath.row]
         let eventName = cell.viewWithTag(100) as UILabel
         let eventDate = cell.viewWithTag(101) as UILabel
 
         eventName.text = event.name
         eventDate.text = event.dateString()
+
+        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
 
         return cell
     }
@@ -75,10 +82,14 @@ class EventsViewController: UITableViewController {
 
     func startObserver() {
         self.observer = notificationCenter.addObserverForName("reloadUserGroup", object: nil, queue: NSOperationQueue.mainQueue(), usingBlock: {(notification: NSNotification!) -> Void in
-            self.loadUserGroup()
-            self.navigationController?.popToRootViewControllerAnimated(false)
-            self.tableView.reloadData()
-            self.refreshControl?.attributedTitle = self.refreshControlTitle()
+            let updatedUserGroupKey = notification.object as String?
+            if updatedUserGroupKey != nil && updatedUserGroupKey == UserGroup.current().key {
+                self.loadUserGroup()
+                self.navigationController?.popToRootViewControllerAnimated(false)
+                self.tableView.reloadData()
+                self.refreshControlTitle()
+            }
+
             self.refreshControl?.endRefreshing()
         })
     }

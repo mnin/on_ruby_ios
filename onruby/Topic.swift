@@ -20,6 +20,10 @@ class Topic {
         self.description = description
     }
 
+    func user() -> User? {
+        return User.find(self.user_id)
+    }
+
     class func findAllForEvent(event_id: Int) -> [Topic] {
         let allTopics  = UserGroup.current().allTopics()
         var topicArray = [Topic]()
