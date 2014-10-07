@@ -5,8 +5,6 @@
 //  Created by Martin Wilhelmi on 24.09.14.
 //
 
-import UIKit
-
 class SettingsViewController: UITableViewController {
     override func numberOfSectionsInTableView(tableView: UITableView?) -> Int {
         return 3
@@ -135,6 +133,8 @@ class SettingsViewController: UITableViewController {
         var currentUserGroup = UserGroup.current()
         if userGroup.key != currentUserGroup.key {
             userGroup.setAsCurrent()
+
+            ZeroPush.shared().setChannels([userGroup.key])
             postUserGroupChangedNotification()
             dispatch_async(dispatch_get_main_queue(), {
                 self.tableView.reloadData()
@@ -144,7 +144,6 @@ class SettingsViewController: UITableViewController {
 
     func postUserGroupChangedNotification() {
         let notificationCenter = NSNotificationCenter.defaultCenter()
-
         notificationCenter.postNotificationName("reloadUserGroup", object: UserGroup.current().key)
     }
 }

@@ -5,8 +5,6 @@
 //  Created by Martin Wilhelmi on 25.09.14.
 //
 
-import UIKit
-
 class EventViewController: UITableViewController {
     var event: Event!
 
@@ -70,20 +68,8 @@ class EventViewController: UITableViewController {
             switch indexPath.row {
             case 0:
                 let textView = cell!.viewWithTag(100) as UITextView
-                var attributedText = NSMutableAttributedString()
-                let lineBreak = NSAttributedString(string: "\n")
-                let systemFontSize = UIFont.systemFontSize()
-                let html = MMMarkdown.HTMLStringWithMarkdown(event.description, error: nil)
-                let eventDescription = NSAttributedString(data: html.dataUsingEncoding(NSISOLatin1StringEncoding, allowLossyConversion: true), options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType], documentAttributes: nil, error: nil)
 
-                attributedText.appendAttributedString(NSAttributedString(string: self.event.name, attributes: NSDictionary(object: UIFont.boldSystemFontOfSize(systemFontSize + 2), forKey: NSFontAttributeName)))
-                attributedText.appendAttributedString(lineBreak)
-                attributedText.appendAttributedString(NSAttributedString(string: self.event.dateString()))
-                attributedText.appendAttributedString(lineBreak)
-                attributedText.appendAttributedString(lineBreak)
-                attributedText.appendAttributedString(eventDescription)
-
-                textView.attributedText = attributedText
+                textView.attributedText = attributedStringForEvent(event.description)
             case 1:
                 cell?.selectionStyle = UITableViewCellSelectionStyle.Default
                 cell?.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
@@ -124,17 +110,8 @@ class EventViewController: UITableViewController {
             case 2:
                 let location = self.event.location
                 let textView = cell!.viewWithTag(100) as UITextView
-                var attributedText = NSMutableAttributedString()
-                let lineBreak = NSAttributedString(string: "\n")
-                let systemFontSize = UIFont.systemFontSize()
 
-                attributedText.appendAttributedString(NSAttributedString(string: "\(location.name) - \(location.url)", attributes: NSDictionary(object: UIFont.boldSystemFontOfSize(systemFontSize + 1), forKey: NSFontAttributeName)))
-                attributedText.appendAttributedString(lineBreak)
-                attributedText.appendAttributedString(NSAttributedString(string: "\(location.street) \(location.house_number)"))
-                attributedText.appendAttributedString(lineBreak)
-                attributedText.appendAttributedString(NSAttributedString(string: "\(location.zip) \(location.city)"))
-
-                textView.attributedText = attributedText
+                textView.attributedText = attributedStringFor(location)
             case 3:
                 let participantsCount = self.event.participantsArray.count
                 cell?.textLabel?.text = "Participants (\(participantsCount))"
@@ -241,5 +218,36 @@ class EventViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+    }
+
+    func attributedStringFor(location: Location) -> NSAttributedString {
+        var attributedText = NSMutableAttributedString()
+        let lineBreak = NSAttributedString(string: "\n")
+        let systemFontSize = UIFont.systemFontSize()
+
+        attributedText.appendAttributedString(NSAttributedString(string: "\(location.name) - \(location.url)", attributes: NSDictionary(object: UIFont.boldSystemFontOfSize(systemFontSize + 1), forKey: NSFontAttributeName)))
+        attributedText.appendAttributedString(lineBreak)
+        attributedText.appendAttributedString(NSAttributedString(string: "\(location.street) \(location.house_number)"))
+        attributedText.appendAttributedString(lineBreak)
+        attributedText.appendAttributedString(NSAttributedString(string: "\(location.zip) \(location.city)"))
+
+        return attributedText
+    }
+
+    func attributedStringForEvent(description: String) -> NSAttributedString {
+        var attributedText = NSMutableAttributedString()
+        let lineBreak = NSAttributedString(string: "\n")
+        let systemFontSize = UIFont.systemFontSize()
+        let html = MMMarkdown.HTMLStringWithMarkdown(description, error: nil)
+        let eventDescription = NSAttributedString(data: html.dataUsingEncoding(NSISOLatin1StringEncoding, allowLossyConversion: true), options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType], documentAttributes: nil, error: nil)
+
+        attributedText.appendAttributedString(NSAttributedString(string: self.event.name, attributes: NSDictionary(object: UIFont.boldSystemFontOfSize(systemFontSize + 2), forKey: NSFontAttributeName)))
+        attributedText.appendAttributedString(lineBreak)
+        attributedText.appendAttributedString(NSAttributedString(string: self.event.dateString()))
+        attributedText.appendAttributedString(lineBreak)
+        attributedText.appendAttributedString(lineBreak)
+        attributedText.appendAttributedString(eventDescription)
+
+        return attributedText
     }
 }

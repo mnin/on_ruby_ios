@@ -5,8 +5,6 @@
 //  Created by Martin Wilhelmi on 24.09.14.
 //
 
-import UIKit
-
 class EventsViewController: UITableViewController {
     let notificationCenter = NSNotificationCenter.defaultCenter()
     var eventArray         = [Event]()

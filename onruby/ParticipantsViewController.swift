@@ -5,8 +5,6 @@
 //  Created by Martin Wilhelmi on 25.09.14.
 //
 
-import UIKit
-
 class ParticipantsViewController: UITableViewController {
     var participants: [User]!
 

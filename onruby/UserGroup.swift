@@ -92,7 +92,7 @@ class UserGroup {
     }
 
     func allUserDictionary() -> Dictionary<Int, User> {
-        if self.userDictionary.count == 0 {
+        if self.userDictionary.isEmpty {
             self.userDictionary = User.loadUsersFromJSONDictionary(UserGroup.getArrayFromJSON("users"))
         }
 
@@ -126,7 +126,6 @@ class UserGroup {
             data.writeToFile(filepath, atomically: false)
             if UserGroup.current().key == self.key {
                 self.resetCache()
-
                 self.notificationCenter.postNotificationName("reloadUserGroup", object: UserGroup.current().key)
             }
         }, failure: { (operation: AFHTTPRequestOperation!, error: NSError!) in
@@ -138,7 +137,7 @@ class UserGroup {
 
     func resetCache() {
         self.jsonDictionary = nil
-        self.userDictionary.removeAll(keepCapacity: true)
+        self.userDictionary.removeAll(keepCapacity: false)
         self.events = []
         self.topics = []
     }
@@ -164,5 +163,11 @@ class UserGroup {
         let jsonDictionary = currentUserGroup.getJSON()
 
         return jsonDictionary.objectForKey(dictKey) as NSArray
+    }
+
+    class func preloadData() {
+        self.current().allEvents()
+        self.current().allTopics()
+        self.current().allUserDictionary()
     }
 }

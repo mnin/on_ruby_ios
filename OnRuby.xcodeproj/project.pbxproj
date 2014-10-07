@@ -15,6 +15,7 @@
 		0B372B6B19D466E700C52719 /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B372B6A19D466E700C52719 /* Topic.swift */; };
 		0B372B6D19D466F100C52719 /* Material.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B372B6C19D466F100C52719 /* Material.swift */; };
 		0B372B6F19D4728D00C52719 /* ParticipantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B372B6E19D4728D00C52719 /* ParticipantsViewController.swift */; };
+		0B5D89EC19E2B16D0063F64A /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0B5D89EB19E2B16D0063F64A /* Settings.bundle */; };
 		0B69F85C19D44A1200903033 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B69F85B19D44A1200903033 /* User.swift */; };
 		0B69F85E19D4591100903033 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B69F85D19D4591100903033 /* UserViewController.swift */; };
 		0B69F86019D45BB100903033 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B69F85F19D45BB100903033 /* Location.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0458BC93B93897CA0E8D7845 /* Pods-onruby.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onruby.release.xcconfig"; path = "Pods/Target Support Files/Pods-onruby/Pods-onruby.release.xcconfig"; sourceTree = "<group>"; };
 		0B00D67119D2CA2C00043E53 /* OnRuby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnRuby.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B00D67519D2CA2C00043E53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B00D67619D2CA2C00043E53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 		0B372B6A19D466E700C52719 /* Topic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		0B372B6C19D466F100C52719 /* Material.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Material.swift; sourceTree = "<group>"; };
 		0B372B6E19D4728D00C52719 /* ParticipantsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticipantsViewController.swift; sourceTree = "<group>"; };
+		0B5D89EB19E2B16D0063F64A /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		0B69F85B19D44A1200903033 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0B69F85D19D4591100903033 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		0B69F85F19D45BB100903033 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
@@ -87,7 +90,7 @@
 		0BF811E619DAD9DF001C1B64 /* NSObject+AssociatedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AssociatedObject.m"; sourceTree = "<group>"; };
 		0BFB456519D5EDC800D99C24 /* TopicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicViewController.swift; sourceTree = "<group>"; };
 		28341F7F2D6F47B6A081713B /* libPods-onruby.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-onruby.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D08085E9CFA8433BBDC1B643 /* Pods-onruby.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onruby.xcconfig"; path = "Pods/Pods-onruby.xcconfig"; sourceTree = "<group>"; };
+		7EFE735661505875FA842F92 /* Pods-onruby.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onruby.debug.xcconfig"; path = "Pods/Target Support Files/Pods-onruby/Pods-onruby.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +121,7 @@
 				AD650CE950FE49418F00FB3A /* Frameworks */,
 				0BA7254619D2CD8700971488 /* onruby-Bridging-Header.h */,
 				0BF0785719D4199F0050586D /* onruby-Environment.h */,
-				D08085E9CFA8433BBDC1B643 /* Pods-onruby.xcconfig */,
+				817AE87F6386239160A7A45C /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -139,10 +142,11 @@
 				0B77BB6E19D305F9007FA19F /* models */,
 				0B77BB6D19D305F3007FA19F /* controllers */,
 				0B00D67619D2CA2C00043E53 /* AppDelegate.swift */,
-				0B00D67C19D2CA2C00043E53 /* Main.storyboard */,
 				0B00D67F19D2CA2C00043E53 /* Images.xcassets */,
+				0B00D67C19D2CA2C00043E53 /* Main.storyboard */,
 				0B00D68119D2CA2C00043E53 /* LaunchScreen.xib */,
 				0B00D67419D2CA2C00043E53 /* Supporting Files */,
+				0B5D89EB19E2B16D0063F64A /* Settings.bundle */,
 			);
 			path = onruby;
 			sourceTree = "<group>";
@@ -177,10 +181,10 @@
 			children = (
 				0B77BB6619D2ED71007FA19F /* EventsViewController.swift */,
 				0BF0785919D436040050586D /* EventViewController.swift */,
-				0BA7254919D2D0A300971488 /* SettingsViewController.swift */,
-				0B69F85D19D4591100903033 /* UserViewController.swift */,
 				0B372B6E19D4728D00C52719 /* ParticipantsViewController.swift */,
+				0BA7254919D2D0A300971488 /* SettingsViewController.swift */,
 				0BFB456519D5EDC800D99C24 /* TopicViewController.swift */,
+				0B69F85D19D4591100903033 /* UserViewController.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -188,12 +192,12 @@
 		0B77BB6E19D305F9007FA19F /* models */ = {
 			isa = PBXGroup;
 			children = (
-				0BA7254B19D2D19D00971488 /* UserGroup.swift */,
 				0B77BB6819D2F505007FA19F /* Event.swift */,
-				0B69F85B19D44A1200903033 /* User.swift */,
 				0B69F85F19D45BB100903033 /* Location.swift */,
-				0B372B6A19D466E700C52719 /* Topic.swift */,
 				0B372B6C19D466F100C52719 /* Material.swift */,
+				0B372B6A19D466E700C52719 /* Topic.swift */,
+				0B69F85B19D44A1200903033 /* User.swift */,
+				0BA7254B19D2D19D00971488 /* UserGroup.swift */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -225,6 +229,15 @@
 			name = extensions;
 			sourceTree = "<group>";
 		};
+		817AE87F6386239160A7A45C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7EFE735661505875FA842F92 /* Pods-onruby.debug.xcconfig */,
+				0458BC93B93897CA0E8D7845 /* Pods-onruby.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AD650CE950FE49418F00FB3A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,6 +254,7 @@
 			buildConfigurationList = 0B00D69219D2CA2C00043E53 /* Build configuration list for PBXNativeTarget "onruby" */;
 			buildPhases = (
 				0BF0785119D40E4B0050586D /* ShellScript */,
+				0B12F43C19E2B44600DAF6DD /* ShellScript */,
 				EF3655362BF94EE48CEC4DD5 /* Check Pods Manifest.lock */,
 				0B00D66D19D2CA2C00043E53 /* Sources */,
 				0B00D66E19D2CA2C00043E53 /* Frameworks */,
@@ -286,6 +300,12 @@
 				TargetAttributes = {
 					0B00D67019D2CA2C00043E53 = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = M3YVS85XC2;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					0B00D68719D2CA2C00043E53 = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -324,6 +344,7 @@
 				0B00D67E19D2CA2C00043E53 /* Main.storyboard in Resources */,
 				0BE730F519D404E3001A84F0 /* leipzig.json in Resources */,
 				0B00D68319D2CA2C00043E53 /* LaunchScreen.xib in Resources */,
+				0B5D89EC19E2B16D0063F64A /* Settings.bundle in Resources */,
 				0BE730F219D404E3001A84F0 /* hamburg.json in Resources */,
 				0B00D68019D2CA2C00043E53 /* Images.xcassets in Resources */,
 				0BE730EC19D404E3001A84F0 /* berlin.json in Resources */,
@@ -344,6 +365,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0B12F43C19E2B44600DAF6DD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "VERSION=`/usr/libexec/PlistBuddy -c \"Print :CFBundleVersion\" \"${INFOPLIST_FILE}\" | sed 's/,/, /g'`\nSHORT_VERSION=`/usr/libexec/PlistBuddy -c \"Print :CFBundleShortVersionString\" \"${INFOPLIST_FILE}\" | sed 's/,/, /g'`\n/usr/libexec/PlistBuddy -c \"Set PreferenceSpecifiers:1:DefaultValue $SHORT_VERSION ($VERSION)\" \"onruby/Settings.bundle/Root.plist\"";
+			showEnvVarsInLog = 0;
+		};
 		0B54FE6619E2A4C000C8E418 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -355,7 +390,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = "/usr/bin/env ruby";
-			shellScript = "require 'yaml'\n\nconfig = YAML::load(File.read('.env'))\n\nsystem(\"./Pods/CrashlyticsFramework/Crashlytics.framework/run #{config['crashlytics_api_key']} #{config['crashlytics_app_key']}\")";
+			shellScript = "require 'yaml'\nconfig = YAML::load(File.read('.env'))\nsystem(\"./Pods/CrashlyticsFramework/Crashlytics.framework/run #{config['crashlytics_api_key']} #{config['crashlytics_app_key']}\")";
 			showEnvVarsInLog = 0;
 		};
 		0BF0785119D40E4B0050586D /* ShellScript */ = {
@@ -369,7 +404,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = "/usr/bin/env ruby";
-			shellScript = "require 'yaml'\n\nconfig = YAML::load(File.read('.env'))\n\nFile.open(\"onruby-Environment.h\", \"w\") do |file|\nfile.write <<-EOF\n#ifndef onruby_onruby_environment_h\n#define onruby_onruby_environment_h\n\n#define ON_RUBY_API_KEY @\"#{config['api_key']}\"\n#define CRASHLYTICS_API_KEY @\"#{config['crashlytics_api_key']}\"\n\n#endif\nEOF\nend";
+			shellScript = "require 'yaml'\nconfig = YAML::load(File.read('.env'))\nFile.open(\"onruby-Environment.h\", \"w\") do |file|\nfile.write <<-EOF\n#ifndef onruby_onruby_environment_h\n#define onruby_onruby_environment_h\n\n#define ON_RUBY_API_KEY @\"#{config['api_key']}\"\n#define CRASHLYTICS_API_KEY @\"#{config['crashlytics_api_key']}\"\n#define ZEROPUSH_KEY @\"#{config['zeropush_key']}\"\n\n#endif\nEOF\nend";
 			showEnvVarsInLog = 0;
 		};
 		2B8CA24A4CE8404A9F609C4E /* Copy Pods Resources */ = {
@@ -384,7 +419,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-onruby-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-onruby/Pods-onruby-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EF3655362BF94EE48CEC4DD5 /* Check Pods Manifest.lock */ = {
@@ -543,16 +578,16 @@
 		};
 		0B00D69319D2CA2C00043E53 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D08085E9CFA8433BBDC1B643 /* Pods-onruby.xcconfig */;
+			baseConfigurationReference = 7EFE735661505875FA842F92 /* Pods-onruby.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				INFOPLIST_FILE = onruby/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = OnRuby;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "d556ea3c-209e-40d1-bd0e-f420f153cba0";
 				SWIFT_OBJC_BRIDGING_HEADER = "onruby-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -560,16 +595,16 @@
 		};
 		0B00D69419D2CA2C00043E53 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D08085E9CFA8433BBDC1B643 /* Pods-onruby.xcconfig */;
+			baseConfigurationReference = 0458BC93B93897CA0E8D7845 /* Pods-onruby.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				INFOPLIST_FILE = onruby/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = OnRuby;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "b72fd90b-2856-44c3-b1c0-7302a99697a1";
 				SWIFT_OBJC_BRIDGING_HEADER = "onruby-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

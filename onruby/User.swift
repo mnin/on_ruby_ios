@@ -26,6 +26,22 @@ class User {
         self.url        = url
     }
 
+    func availableDescription() -> String {
+        if self.available != nil {
+            return self.available == true ? "Yes" : "No"
+        } else {
+            return "Unkown"
+        }
+    }
+
+    func freelancerDescription() -> String {
+        if self.freelancer != nil {
+            return self.freelancer == true ? "Yes" : "No"
+        } else {
+            return "Unkown"
+        }
+    }
+
     class func loadFromJsonArray(participants: NSArray) -> [User] {
         var userArray = [User]()
         var user_id: Int

@@ -5,8 +5,6 @@
 //  Created by Martin Wilhelmi on 25.09.14.
 //
 
-import UIKit
-
 class UserViewController: UITableViewController {
     var user: User!
 
@@ -115,18 +113,10 @@ class UserViewController: UITableViewController {
             switch indexPath.row {
             case 0:
                 cell?.textLabel?.text = "Available"
-                if user.available != nil {
-                    cell?.detailTextLabel?.text = user.available == false ? "No" : "Yes"
-                } else {
-                    cell?.detailTextLabel?.text = "Unknown"
-                }
+                cell?.detailTextLabel?.text = user.availableDescription()
             case 1:
                 cell?.textLabel?.text = "Freelancer"
-                if user.freelancer != nil {
-                    cell?.detailTextLabel?.text = user.freelancer == false ? "No" : "Yes"
-                } else {
-                    cell?.detailTextLabel?.text = "Unknown"
-                }
+                cell?.detailTextLabel?.text = user.freelancerDescription()
             default:
                 break
             }
