@@ -3,10 +3,10 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, "8.0"
 
 target "onruby" do
-  pod "AFNetworking",         "2.4.1"
-  pod "MMMarkdown",           "0.3"
-  pod "CrashlyticsFramework", "2.2.4"
-  pod "ZeroPush",             "2.0.2"
+  pod "AFNetworking",         "2.5.0"
+  pod "MMMarkdown",           "0.4"
+  pod "CrashlyticsFramework", "2.2.5.2"
+  pod "ZeroPush",             "2.0.3"
 end
 
 post_install do | installer |

@@ -23,13 +23,13 @@ class TopicViewController: UIViewController, UIActionSheetDelegate {
         let topicName = NSAttributedString(string: "\(name):", attributes: NSDictionary(object: UIFont.boldSystemFontOfSize(UIFont.systemFontSize() + 2), forKey: NSFontAttributeName))
         let lineBreak = NSAttributedString(string: "\n")
         let html = MMMarkdown.HTMLStringWithMarkdown(description, error: nil)
-        let topicDescription = NSAttributedString(data: html.dataUsingEncoding(NSISOLatin1StringEncoding, allowLossyConversion: true), options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType], documentAttributes: nil, error: nil)
+        let topicDescription = NSAttributedString(data: html.dataUsingEncoding(NSISOLatin1StringEncoding, allowLossyConversion: true)!, options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType], documentAttributes: nil, error: nil)
 
         var attributedString = NSMutableAttributedString()
         attributedString.appendAttributedString(topicName)
         attributedString.appendAttributedString(lineBreak)
         attributedString.appendAttributedString(lineBreak)
-        attributedString.appendAttributedString(topicDescription)
+        attributedString.appendAttributedString(topicDescription!)
 
         return attributedString
     }

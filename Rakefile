@@ -1,6 +1,6 @@
 require 'yaml'
 
-USER_GROUPS = %w(hamburg bremen cologne saar karlsruhe berlin leipzig dresden railsgirlshh bonn innsbruck)
+USER_GROUPS = %w(hamburg bremen cologne saar karlsruhe berlin leipzig dresden railsgirlshh bonn innsbruck madridrb)
 
 config = YAML::load(File.read('.env'))
 

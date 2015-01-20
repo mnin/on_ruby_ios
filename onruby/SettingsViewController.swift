@@ -115,7 +115,8 @@ class SettingsViewController: UITableViewController {
                 break
             }
         case 2:
-            UIApplication.sharedApplication().openURL(NSURL(string: "https://twitter.com/mnin"))
+            let url = NSURL(string: "https://twitter.com/mnin")
+            UIApplication.sharedApplication().openURL(url!)
         default:
             break
         }

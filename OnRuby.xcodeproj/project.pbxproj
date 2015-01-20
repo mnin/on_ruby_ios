@@ -23,6 +23,7 @@
 		0B77BB6919D2F505007FA19F /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B77BB6819D2F505007FA19F /* Event.swift */; };
 		0BA7254A19D2D0A300971488 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA7254919D2D0A300971488 /* SettingsViewController.swift */; };
 		0BA7254C19D2D19D00971488 /* UserGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA7254B19D2D19D00971488 /* UserGroup.swift */; };
+		0BB8BA201A6E778F0009888E /* madridrb.json in Resources */ = {isa = PBXBuildFile; fileRef = 0BB8BA1F1A6E778F0009888E /* madridrb.json */; };
 		0BE730EC19D404E3001A84F0 /* berlin.json in Resources */ = {isa = PBXBuildFile; fileRef = 0BE730E019D404E3001A84F0 /* berlin.json */; };
 		0BE730ED19D404E3001A84F0 /* bonn.json in Resources */ = {isa = PBXBuildFile; fileRef = 0BE730E119D404E3001A84F0 /* bonn.json */; };
 		0BE730EE19D404E3001A84F0 /* bremen.json in Resources */ = {isa = PBXBuildFile; fileRef = 0BE730E219D404E3001A84F0 /* bremen.json */; };
@@ -73,6 +74,7 @@
 		0BA7254619D2CD8700971488 /* onruby-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "onruby-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		0BA7254919D2D0A300971488 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		0BA7254B19D2D19D00971488 /* UserGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserGroup.swift; sourceTree = "<group>"; };
+		0BB8BA1F1A6E778F0009888E /* madridrb.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = madridrb.json; sourceTree = "<group>"; };
 		0BE730E019D404E3001A84F0 /* berlin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = berlin.json; sourceTree = "<group>"; };
 		0BE730E119D404E3001A84F0 /* bonn.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bonn.json; sourceTree = "<group>"; };
 		0BE730E219D404E3001A84F0 /* bremen.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bremen.json; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 		0BE730DF19D404E3001A84F0 /* data */ = {
 			isa = PBXGroup;
 			children = (
+				0BB8BA1F1A6E778F0009888E /* madridrb.json */,
 				0BE730E019D404E3001A84F0 /* berlin.json */,
 				0BE730E119D404E3001A84F0 /* bonn.json */,
 				0BE730E219D404E3001A84F0 /* bremen.json */,
@@ -347,6 +350,7 @@
 				0B5D89EC19E2B16D0063F64A /* Settings.bundle in Resources */,
 				0BE730F219D404E3001A84F0 /* hamburg.json in Resources */,
 				0B00D68019D2CA2C00043E53 /* Images.xcassets in Resources */,
+				0BB8BA201A6E778F0009888E /* madridrb.json in Resources */,
 				0BE730EC19D404E3001A84F0 /* berlin.json in Resources */,
 				0BE730F719D404E3001A84F0 /* saar.json in Resources */,
 				0BE730ED19D404E3001A84F0 /* bonn.json in Resources */,

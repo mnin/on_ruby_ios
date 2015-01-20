@@ -80,7 +80,7 @@ class UserViewController: UITableViewController {
                 label.text = user.name
 
                 let urlObject = NSURL(string: user.imageURL)
-                let iconURLRequest = NSURLRequest(URL: urlObject)
+                let iconURLRequest = NSURLRequest(URL: urlObject!)
                 cell.imageView?.associatedObject = urlObject
                 cell.imageView?.image = nil
 
@@ -169,18 +169,18 @@ class UserViewController: UITableViewController {
             switch indexPath.row {
             case 0:
                 if user.github != nil && user.github != "" {
-                    let url: NSURL = NSURL(string: "https://github.com/\(user.github!)")
-                    UIApplication.sharedApplication().openURL(url)
+                    let url = NSURL(string: "https://github.com/\(user.github!)")
+                    UIApplication.sharedApplication().openURL(url!)
                 }
             case 1:
                 if user.twitter != nil && user.twitter != "" {
-                    let url: NSURL = NSURL(string: "https://twitter.com/\(user.twitter!)")
-                    UIApplication.sharedApplication().openURL(url)
+                    let url = NSURL(string: "https://twitter.com/\(user.twitter!)")
+                    UIApplication.sharedApplication().openURL(url!)
                 }
             case 2:
                 if user.url != nil && user.url != "" {
-                    let url: NSURL = NSURL(string: user.url!)
-                    UIApplication.sharedApplication().openURL(url)
+                    let url = NSURL(string: user.url!)
+                    UIApplication.sharedApplication().openURL(url!)
                 }
             default:
                 break

@@ -18,7 +18,8 @@ let allUserGroups = [
     UserGroup(key: "dresden",      name: "Ruby Usergroup Dresden",   twitter: "ruby_dresden"),
     UserGroup(key: "railsgirlshh", name: "Railsgirls Hamburg",       twitter: "railsgirlshh"),
     UserGroup(key: "bonn",         name: "bonn.rb",                  twitter: "bonnrb"),
-    UserGroup(key: "innsbruck",    name: "Innsbruck.rb",             twitter: "innsbruckrb")
+    UserGroup(key: "innsbruck",    name: "Innsbruck.rb",             twitter: "innsbruckrb"),
+    UserGroup(key: "madridrb",     name: "Madrid.rb",                twitter: "madridrb")
 ]
 
 class UserGroup {
@@ -37,11 +38,15 @@ class UserGroup {
     }
 
     func twitterUrl() -> NSURL {
-        return NSURL(string: "https://twitter.com/\(self.twitter)")
+        let url = NSURL(string: "https://twitter.com/\(self.twitter)")
+
+        return url!
     }
 
     func homepageUrl() -> NSURL {
-        return NSURL(string: "http://\(self.key).onruby.de")
+        let url = NSURL(string: "http://\(self.key).onruby.de")
+
+        return url!
     }
 
     func dataUrlString() -> String {
@@ -75,9 +80,9 @@ class UserGroup {
         if self.jsonDictionary? == nil {
             var error: NSError?
             let filepath = getFilePathForKey()
-            let jsonData = NSData.dataWithContentsOfFile(filepath, options: NSDataReadingOptions.DataReadingMapped, error: &error)
+            let jsonData = NSData(contentsOfFile: filepath, options: NSDataReadingOptions.DataReadingMapped, error: &error)
 
-            self.jsonDictionary = NSJSONSerialization.JSONObjectWithData(jsonData, options: nil, error: &error) as? NSDictionary
+            self.jsonDictionary = NSJSONSerialization.JSONObjectWithData(jsonData!, options: nil, error: &error) as? NSDictionary
         }
 
         return self.jsonDictionary!

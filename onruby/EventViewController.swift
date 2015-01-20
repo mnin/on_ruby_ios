@@ -82,13 +82,13 @@ class EventViewController: UITableViewController {
                 userImage.image = nil
 
                 let urlObject = NSURL(string: user!.imageURL)
-                let iconURLRequest = NSURLRequest(URL: urlObject)
+                let iconURLRequest = NSURLRequest(URL: urlObject!)
                 cell.imageView?.associatedObject = urlObject
                 cell.imageView?.image = nil
 
                 if user!.image == nil {
                     cell.imageView?.setImageWithURLRequest(iconURLRequest, placeholderImage: nil, success:
-                        { [weak cell] (request:NSURLRequest!, response: NSHTTPURLResponse!, image: UIImage!) -> Void in
+                        { [weak cell] (request: NSURLRequest!, response: NSHTTPURLResponse!, image: UIImage!) -> Void in
                             if request != nil && cell?.imageView?.associatedObject as NSURL? == request.URL {
                                 UIGraphicsBeginImageContext(CGSize(width: 40, height: 40))
                                 image.drawInRect(CGRect(x: 0, y: 0, width: 40, height: 40))
@@ -97,7 +97,7 @@ class EventViewController: UITableViewController {
                                 user!.image = cell?.imageView?.image
                                 cell?.setNeedsLayout()
                             }
-                        }, failure: { [weak cell] (request:NSURLRequest!, response: NSHTTPURLResponse!, error: NSError!) -> Void in
+                        }, failure: { [weak cell] (request: NSURLRequest!, response: NSHTTPURLResponse!, error: NSError!) -> Void in
                             if request != nil && cell?.imageView?.associatedObject as NSURL? == request.URL {
                                 cell?.imageView?.image = nil
                                 cell?.setNeedsLayout()
@@ -177,7 +177,9 @@ class EventViewController: UITableViewController {
             navigationController?.pushViewController(topicViewController, animated: true)
         case 2:
             let material = self.event.materialsArray[indexPath.row]
-            UIApplication.sharedApplication().openURL(NSURL(string: material.url))
+            let url = NSURL(string: material.url)
+
+            UIApplication.sharedApplication().openURL(url!)
         default:
             break
         }
@@ -239,14 +241,15 @@ class EventViewController: UITableViewController {
         let lineBreak = NSAttributedString(string: "\n")
         let systemFontSize = UIFont.systemFontSize()
         let html = MMMarkdown.HTMLStringWithMarkdown(description, error: nil)
-        let eventDescription = NSAttributedString(data: html.dataUsingEncoding(NSISOLatin1StringEncoding, allowLossyConversion: true), options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType], documentAttributes: nil, error: nil)
+        let data = html.dataUsingEncoding(NSISOLatin1StringEncoding, allowLossyConversion: true)
+        let eventDescription = NSAttributedString(data: data!, options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType], documentAttributes: nil, error: nil)
 
         attributedText.appendAttributedString(NSAttributedString(string: self.event.name, attributes: NSDictionary(object: UIFont.boldSystemFontOfSize(systemFontSize + 2), forKey: NSFontAttributeName)))
         attributedText.appendAttributedString(lineBreak)
         attributedText.appendAttributedString(NSAttributedString(string: self.event.dateString()))
         attributedText.appendAttributedString(lineBreak)
         attributedText.appendAttributedString(lineBreak)
-        attributedText.appendAttributedString(eventDescription)
+        attributedText.appendAttributedString(eventDescription!)
 
         return attributedText
     }

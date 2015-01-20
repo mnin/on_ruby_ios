@@ -32,7 +32,7 @@ class ParticipantsViewController: UITableViewController {
 
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         let urlObject = NSURL(string: user.imageURL)
-        let iconURLRequest = NSURLRequest(URL: urlObject)
+        let iconURLRequest = NSURLRequest(URL: urlObject!)
         cell.imageView?.associatedObject = urlObject
         cell.imageView?.image = nil
 
